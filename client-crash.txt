@@ -1,0 +1,25 @@
+Game Version: v1.18.0-rc.1 (Unstable)
+04.04.2023 13:34:47: Critical error occurred in the following mod: aculinaryartillery@1.0.12
+Loaded Mods: aculinaryartillery@1.0.12, weaponpacka@1.3.1, tonwexp@1.1.0, betterdrifters@2.1.3, canmarket@0.2.0, chiseltools@1.8.2, commonlib@1.0.4, dungeonsandshafts@0.2.3, fieldsofgold@2.1.6, hqzlights@1.0.0, moreclasses@1.2.5, playercorpse@1.6.0-rc.1, primitivesurvival@3.1.5, qptech@1.13.01, sortablestorage@1.8.0, spyglass@0.4.5, game@1.18.0-rc.1, awearablelight@1.0.4, carryon@0.13.0-pre.2, carryonmore@1.5.0, coinage@1.2.0, lavoisier@1.2.6-pre.1, lichen@1.6.2, medievalexpansion@3.9.0-pre.2, morepiles@1.3.0, petai@1.6.0, usefulstuff17@1.1.3, creative@1.18.0-rc.1, survival@1.18.0-rc.1, workbenchexpansion@1.6.0-pre.1, bullseye@2.5.0-pre.2, chemistrylib@1.1.1, em@2.0.0-pre.4, feverstonehorses@1.4.1, bricklayers@2.0.0-pre.4, kosfire@1.1.1-pre.1
+System.ArgumentOutOfRangeException: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Cannot get item of id 3232, item list count is only until 0!
+   в Vintagestory.Client.NoObf.ClientMain.GetItem(Int32 itemId) в VintagestoryLib\Client\ClientMain.cs:строка 2118
+   в Vintagestory.API.Common.ItemStack..ctor(BinaryReader reader, IWorldAccessor resolver) в VintagestoryApi\Common\Collectible\ItemStack.cs:строка 187
+   в Vintagestory.API.Common.CraftingRecipeIngredient.FromBytes(BinaryReader reader, IWorldAccessor resolver) в VintagestoryApi\Common\Crafting\CraftingRecipeIngredient.cs:строка 270
+   в ACulinaryArtillery.DoughIngredient.FromBytes(BinaryReader reader, IWorldAccessor resolver)
+   в ACulinaryArtillery.DoughRecipe.FromBytes(BinaryReader reader, IWorldAccessor resolver)
+   в ACulinaryArtillery.RecipeUploadSystem.OnServerMessage(RecipeUpload networkMessage)
+   в Vintagestory.Client.NoObf.NetworkChannel.<>c__DisplayClass12_0`1.<SetMessageHandler>b__0(Packet_CustomPacket p) в VintagestoryLib\Client\API\NetworkChannel.cs:строка 74
+   в Vintagestory.Client.NoObf.NetworkAPI.HandleCustomPacket(Packet_Server packet) в VintagestoryLib\Client\API\NetworkAPI.cs:строка 108
+   в Vintagestory.Client.NoObf.NetworkAPI.HandleChannelsPacket(Packet_Server packet) в VintagestoryLib\Client\API\NetworkAPI.cs:строка 87
+   в Vintagestory.Client.NoObf.ClientMain.ExecuteMainThreadTasks(Single deltaTime) в VintagestoryLib\Client\ClientMain.cs:строка 745
+   в Vintagestory.Client.GuiScreenConnectingToServer.RenderToDefaultFramebuffer(Single dt) в VintagestoryLib\Client\MainMenu\Screens\GuiScreenConnectingToServer.cs:строка 304
+   в Vintagestory.Client.ScreenManager.Render(Single dt) в VintagestoryLib\Client\ScreenManager.cs:строка 724
+   в Vintagestory.Client.ScreenManager.OnNewFrame(Single dt) в VintagestoryLib\Client\ScreenManager.cs:строка 627
+   в Vintagestory.Client.NoObf.ClientPlatformWindows.window_RenderFrame(Object sender, FrameEventArgs e) в VintagestoryLib\Client\ClientPlatform\GameWindow.cs:строка 126
+   в System.EventHandler`1.Invoke(Object sender, TEventArgs e)
+   в OpenTK.GameWindow.RaiseRenderFrame(Double elapsed, Double& timestamp) в C:\Users\Nexrem\Desktop\transfer\opentk\src\OpenTK\GameWindow.cs:строка 479
+   в OpenTK.GameWindow.DispatchRenderFrame() в C:\Users\Nexrem\Desktop\transfer\opentk\src\OpenTK\GameWindow.cs:строка 454
+   в OpenTK.GameWindow.Run(Double updates_per_second, Double frames_per_second) в C:\Users\Nexrem\Desktop\transfer\opentk\src\OpenTK\GameWindow.cs:строка 375
+   в Vintagestory.Client.ClientProgram.Start(ClientProgramArgs args, String[] rawArgs)
+   в Vintagestory.ClientNative.CrashReporter.Start(ThreadStart start) в VintagestoryLib\Client\ClientPlatform\ClientNative\CrashReporter.cs:строка 93
